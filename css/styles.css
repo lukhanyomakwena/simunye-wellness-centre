@@ -12,6 +12,43 @@
     padding: 2rem;
 }
 
+.header h1 {
+    font-family: 'Pangolin', cursive;
+    font-size: 3.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+}
+
+.header p {
+    font-size: 1.8rem;
+    font-style: italic;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    letter-spacing: 1px;
+    margin-top: 0.5rem;
+    font-family: 'Pangolin', cursive;
+}
+
+/* Main Navigation in Header */
+.header nav {
+    margin-top: 1.5rem;
+}
+
+.header nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.header nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+
 /* Light mode (default) */
 /*
 main {
@@ -23,9 +60,82 @@ main {
     min-height: 100vh;
 }
 
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+}
+
+
+*/
+.home h2 {
+    color: #0071c5;
+    font-size: 2rem;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+}
+
+/* Internal Navigation Links */
+nav[role="internal links"] ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+nav[role="internal links"] a {
+    color: #0071c5;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 2rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+nav[role="internal links"] a:hover {
+    background-color: #0071c5;
+    color: white;
+}
+
+#objectives {
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    padding: 2rem;
+    margin: 2rem 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#objectives h2 {
+    color: #0071c5;
+    margin-bottom: 1rem;
+}
+
+#objectives ul li {
+    color: #333; /* Dark gray for readability */
+    /* margin-bottom: 1rem; */
+    padding: 1.2rem;
+    line-height: 0;
+}
+
 /* Header styles */
 .footer {
-    background-color: #CCCCFF;  /* Intel Blue to match Simunye Wellness centre color */
+    background-color: #CCCCFF;  /* Periwinkle to match Simunye Wellness centre color */
     color: black;
     padding: 2rem;
+    line-height: 1.5;
 }
