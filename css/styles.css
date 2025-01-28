@@ -1,0 +1,31 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header styles */
+.header {
+    background-color: #0071c5;  /* Intel Blue to match Simunye Wellness centre color */
+    color: white;
+    padding: 2rem;
+}
+
+/* Light mode (default) */
+/*
+main {
+    background-image: url('../images/background_mode/simunye_wellness_centre_light.png');
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+/* Header styles */
+.footer {
+    background-color: #CCCCFF;  /* Intel Blue to match Simunye Wellness centre color */
+    color: black;
+    padding: 2rem;
+}
