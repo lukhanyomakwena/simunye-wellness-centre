@@ -55,7 +55,7 @@ body h1, h2 {
 }
 
 /* Light mode (default) */
-main {
+/* main { */
     /*
     background-image: url('../images/background_mode/simunye_wellness_centre_light.png');
     background-size: auto;
@@ -64,8 +64,8 @@ main {
     background-attachment: fixed;
     min-height: 100vh;
     */
-    background-color: rgba(0, 0, 0, 0.767);
-}
+    /* background-color: rgba(0, 0, 0, 0.767); */
+/* } */
 
 /*
 .gallery-grid {
@@ -136,7 +136,7 @@ nav[role="internal-links"] a:hover {
 }
 
 #objectives {
-    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    /* background-color: rgba(255, 255, 255, 0.9); Semi-transparent white */
     padding: 3rem;
     /*margin: 2rem 0;*/
     border-radius: 8px;
@@ -151,20 +151,20 @@ nav[role="internal-links"] a:hover {
 */
 
 #objectives ul li {
-    color : red;
+    /* color : red; */
     /*color: #333;  Dark gray for readability */
     /* margin-bottom: 1rem;
     padding: 1.2rem;*/
     line-height: 2;
 }
 
-#events {
+/* #events {
     color : #0071c5;
-}
+} */
 
-#events {
+/* #events {
     padding : 2rem;
-}
+} */
 
 /* Footer styles */
 .footer {
