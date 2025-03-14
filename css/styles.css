@@ -5,20 +5,42 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+body h2 {
+    color : #0071c5;
+}
+
 /* Header styles */
 .header {
     background-color: #0071c5 !important;  /* Intel Blue to match Simunye Wellness centre color */
     color: white;
-    padding: 2rem;
+    /* padding: 2rem; */
+    overflow: hidden;
+    position: relative;
 }
 
 .header h1 {
     font-family: 'Pangolin', cursive;
     font-size: 3.5rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    margin-bottom: 1rem;
+    /* margin-bottom: 1rem; */
     letter-spacing: 2px;
+    float : left;
+    margin-right: 2rem;
 }
+
+/* Main Navigation in Header */
+.header .header-navbar {
+    margin-top: 1.5rem;
+    padding-right : 2rem;
+    float: right;
+}
+
 
 .header p {
     font-size: 1.8rem;
@@ -27,14 +49,9 @@
     letter-spacing: 1px;
     margin-top: 0.5rem;
     font-family: 'Pangolin', cursive;
+    clear : both;
 }
-
-/* Main Navigation in Header */
-.header nav {
-    margin-top: 1.5rem;
-}
-
-.header nav a {
+.header .header-navbar a {
     color: white;
     text-decoration: none;
     font-size: 1.2rem;
@@ -45,9 +62,25 @@
     transition: background-color 0.3s ease;
 }
 
-body nav a:hover {
+.header .header-navbar a:hover {
     color : black;
     background-color: lime;
+}
+
+@media (max-width: 768px) {
+    .header h1, .header .header-navbar {
+        float: none;
+        text-align: center;
+    }
+    
+    .header .header-navbar {
+        margin-top: 1rem;
+    }
+    
+    .header .header-navbar a {
+        display: inline-block;
+        margin: 0.5rem;
+    }
 }
 
 body h1, h2 {
@@ -102,16 +135,16 @@ body h1, h2 {
 }
 
 /* Internal Navigation Links */
-nav[role="internal-links"] ul {
+/* nav[role="internal-links"] ul {
     list-style: none;
     display: flex;
     gap: 2rem;
     flex-wrap: wrap;
     padding: 2rem;
     margin-top: 0.5rem;
-}
+} */
 
-nav[role="internal-links"] a {
+/* nav[role="internal-links"] a {
     color: white;
     background-color: rgba(255, 0, 0, 0.774);
     text-decoration: none;
@@ -120,16 +153,16 @@ nav[role="internal-links"] a {
     margin: 0 0.5rem;
     border-radius: 4px;
     transition: all 0.3s ease;
-}
+} */
 /*
 nav[role="internal-links"] a:hover {
     background-color: lime;
     color: black;
 }
 */
-#about h2 {
+/* #about h2 {
     color : #0071c5;
-}
+} */
 
 #about {
     padding : 2rem;
@@ -137,10 +170,10 @@ nav[role="internal-links"] a:hover {
 
 #objectives {
     /* background-color: rgba(255, 255, 255, 0.9); Semi-transparent white */
-    padding: 3rem;
+    padding: 2rem;
     /*margin: 2rem 0;*/
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* border-radius: 8px; */
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
 }
 
 /*
@@ -150,12 +183,32 @@ nav[role="internal-links"] a:hover {
 }
 */
 
+#objectives ul {
+    list-style: none;
+}
+
+
 #objectives ul li {
     /* color : red; */
     /*color: #333;  Dark gray for readability */
-    /* margin-bottom: 1rem;
-    padding: 1.2rem;*/
+    position: relative;
+    /* list-style-image: url('../images/favicon/simunye_wellness_centre_favicon.png'); */
+    margin-left: 1rem;
+    /* padding: 1.2rem;*/
     line-height: 2;
+    padding-left: 30px; 
+}
+
+#objectives ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.7em; /* Vertically center with the text, adjust as needed */
+    width: 16px; /* Control the width of the bullet */
+    height: 16px; /* Control the height of the bullet */
+    background-image: url('../images/favicon/simunye_wellness_centre_favicon.png');
+    background-size: contain; /* Maintain aspect ratio */
+    background-repeat: no-repeat;
 }
 
 /* #events {
@@ -165,6 +218,53 @@ nav[role="internal-links"] a:hover {
 /* #events {
     padding : 2rem;
 } */
+
+/*Event Styles*/
+#event{
+    margin : 2rem;
+}
+
+.event-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.event-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+}
+
+.event-card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.event-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+.event-card h3 {
+    padding: 1rem;
+    margin: 0;
+    color: #333;
+}
+
+.event-card p {
+    padding: 0 1rem 1rem;
+    margin: 0;
+    color: #666;
+}
 
 /* Footer styles */
 .footer {
