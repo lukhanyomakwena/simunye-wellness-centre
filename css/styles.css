@@ -25,15 +25,30 @@ body h2 {
 }
 
 .header h1 {
+    position: relative;
     font-family: 'Pangolin', cursive;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     /* margin-bottom: 1rem; */
     letter-spacing: 2px;
     float : left;
-    margin-right: 2rem;
+    margin-right: 3rem;
+    padding-left: 43px; 
 }
 
+.header h1::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.1em; /* Vertically center with the text, adjust as needed */
+    width: 50px; /* Control the width of the bullet */
+    height: 60px; /* Control the height of the bullet */
+    padding-left: 2px;
+    margin-left: 3px;
+    background-image: url('../images/favicon/simunye-blue-logo.png');
+    background-size: contain; /* Maintain aspect ratio */
+    background-repeat: no-repeat;
+}
 /* Main Navigation in Header */
 .header .header-navbar {
     margin-top: 1.5rem;
@@ -203,9 +218,9 @@ nav[role="internal-links"] a:hover {
     content: "";
     position: absolute;
     left: 0;
-    top: 0.7em; /* Vertically center with the text, adjust as needed */
-    width: 16px; /* Control the width of the bullet */
-    height: 16px; /* Control the height of the bullet */
+    top: 0.3em; /* Vertically center with the text, adjust as needed */
+    width: 32px; /* Control the width of the bullet */
+    height: 20px; /* Control the height of the bullet */
     background-image: url('../images/favicon/simunye_wellness_centre_favicon.png');
     background-size: contain; /* Maintain aspect ratio */
     background-repeat: no-repeat;
